@@ -109,6 +109,7 @@ cualquier otra conversación.
 | `GET /api/bot/profile` | El perfil del agente y el knowledge base que editaste en la app |
 | `PUT /api/bot/ficha` | Guardar lo que tu bot descubre del lead (claves libres: cada negocio califica distinto) |
 | `POST /api/bot/handoff` | Devolver la conversación a un humano |
+| `POST /api/bot/stage` | *(fork)* Avanzar la tarjeta del lead a una etapa abierta, **solo hacia adelante**: `{conversationId \| identity, stage}`. Responde `moved`, `already` o `skipped_not_forward`; `404 stage_not_found` si la etapa no existe. Nunca saca un trato de Ganado/Perdido ni lo lleva ahí |
 | `POST /api/bot/typing` | Marcar leído y mostrar "escribiendo…" |
 | `GET /api/bot/media/{id}` | Descargar un adjunto entrante sin tocar Meta |
 | `POST /api/bot/reset` | Reiniciar una conversación de pruebas |
